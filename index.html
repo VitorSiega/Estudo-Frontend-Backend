@@ -7,7 +7,7 @@
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
-    <title>Um titulo ae</title>
+    <title>Login</title>
 </head>
 <body>
     
@@ -16,36 +16,61 @@
             <div class="logo">
                 <img src="image/logoprov.png" alt="">
             </div>
-            <div class="login">
+            <div class="login active" id="loginForm">
                 <div class="tituloLogin">
                     <header id="header">Faça seu login</header>
                 </div>
-
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="Email ou usuário" required>
+                    <input type="text" class="input" id="loginEmail" placeholder="Email ou usuário" required>
                     <i class="bx bx-user"></i>
                 </div>
+                <div class="input-field">
+                    <input type="password" class="input" id="loginPassword" placeholder="Senha" required>
+                    <i class="bx bx-lock"></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login" id="loginButton">
+                </div>
+                <div class="botoes">
+                    <div class="esquerda">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Lembrar</label>
+                    </div>
+                    <div class="direita">
+                        <label class="labesquerda"><a href="#" id="cadastreSeLink">Cadastre-se</a></label>
+                        <label class="labdireita"><a href="#">Esqueci a senha</a></label>
+                    </div>
+                </div>
+            </div>
 
+            <div class="cadastro" id="cadastroForm">
+                <div class="tituloLogin">
+                    <header id="header2">Faça seu cadastro</header>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Usuário" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Email" required>
+                    <i class="bx bx-user"></i>
+                </div>
                 <div class="input-field">
                     <input type="password" class="input" placeholder="Senha" required>
                     <i class="bx bx-lock"></i>
                 </div>
-
+                <div class="input-field" id="inputdata">
+                    <input type="date" class="input" required>
+                </div>
                 <div class="input-field">
-                    <input type="submit" class="submit" value="Login">
+                    <input type="submit" class="submit" id="btcad" value="Cadastrar">
                 </div>
-
                 <div class="botoes">
-                    <div class="esquerda">
-                        <input type="checkbox" id="check">
-                        <label for="check">Lembrar</label>
-                    </div>
                     <div class="direita">
-                        <label class="labesquerda"><a href="#">Cadastre-se</a></label>
-                        <label class="labdireita"><a href="#">Esqueci a senha</a></label>
+                        <label class="labesquerda"><a href="#" id="voltarLoginLink">Voltar para login</a></label>
                     </div>
+                    
                 </div>
-
             </div>
         </div>
     </div>
