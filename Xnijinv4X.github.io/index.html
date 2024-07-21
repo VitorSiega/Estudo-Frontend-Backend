@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Login</title>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="container">
+            <div class="logo">
+                <img src="image/logoprov.png" alt="">
+            </div>
+            <div class="login active" id="loginForm">
+                <div class="tituloLogin">
+                    <header id="header">Faça seu login</header>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" id="loginEmail" placeholder="Email ou usuário" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" id="loginPassword" placeholder="Senha" required>
+                    <i class="bx bx-lock"></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login" id="loginButton">
+                </div>
+                <div class="botoes">
+                    <div class="esquerda">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Lembrar</label>
+                    </div>
+                    <div class="direita">
+                        <label class="labesquerda"><a href="#" id="cadastreSeLink">Cadastre-se</a></label>
+                        <label class="labdireita"><a href="#">Esqueci a senha</a></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cadastro" id="cadastroForm">
+                <div class="tituloLogin">
+                    <header id="header2">Faça seu cadastro</header>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Usuário" id="nomePessoa" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Email" id="emailPessoa" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Senha" id="senhaPessoa" required>
+                    <i class="bx bx-lock"></i>
+                </div>
+                <div class="input-field" id="inputdata">
+                    <input type="date" class="input" id="dataPessoa" name="data" required>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" id="btcad" value="Cadastrar">
+                </div>
+                <div class="botoes">
+                    <div class="direita">
+                        <label class="labesquerda"><a href="#" id="voltarLoginLink">Voltar para login</a></label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptRecursividade.js"></script>
+    <script src="scriptTrocaTela.js"></script>
+    <script src="scriptBackEnd.js"></script>
+    <script src="scriptRecuperarDados.js"></script>
+</body>
+</html>

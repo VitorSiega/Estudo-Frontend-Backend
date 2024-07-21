@@ -1,0 +1,38 @@
+create database bd_pagina_eventos;
+use bd_pagina_eventos;
+
+create table pessoa(
+id int auto_increment primary key,
+nome varchar(100) not null,
+data_nascimento date not null
+);
+
+drop table pessoa;
+
+create table login(
+login_id int auto_increment primary key,
+pessoa_id int not null unique,
+usuario varchar(100) not null unique,
+email varchar(100) not null unique,
+senha varchar(255) not null,
+foreign key (pessoa_id) references pessoa(id)
+);
+
+drop table login;
+
+INSERT INTO pessoa (nome, data_nascimento) VALUES 
+('João Silva', '1990-04-23'),
+('Maria Oliveira', '1985-11-15'),
+('Carlos Pereira', '1978-09-30'),
+('Ana Costa', '1992-07-08'),
+('Pedro Santos', '2000-01-20');
+
+INSERT INTO login (pessoa_id, usuario, email, senha) VALUES 
+(1, 'joao.silva', 'joao.silva@example.com', 'senha_joao'),
+(2, 'maria.oliveira', 'maria.oliveira@example.com', 'senha_maria'),
+(3, 'carlos.pereira', 'carlos.pereira@example.com', 'senha_carlos'),
+(4, 'ana.costa', 'ana.costa@example.com', 'senha_ana'),
+(5, 'pedro.santos', 'pedro.santos@example.com', 'senha_pedro');
+
+select * from pessoa;
+select * from login;
