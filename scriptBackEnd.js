@@ -13,7 +13,7 @@ submitcad.addEventListener("click", function(event){
         return;
     }
 
-    fetch("http://localhost:8080/usuarios/cadastro",{
+    fetch("http://localhost:8080/api/cadastro",{
         headers:{
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -71,9 +71,10 @@ submitLogin.addEventListener("click", function(event){
         if (response.ok) {
             console.log("Login bem-sucedido");
             alert("Login bem-sucedido!");
+            window.location.href = "telaPrincipal.html";
         } else if (response.status === 401) {
-            console.log("Falha no login. Usuário ou senha incorretos.");
-            alert("Falha no login. Usuário ou senha incorretos.");
+            console.log("Falha no login. E-mail ou senha incorretos.");
+            alert("Falha no login. E-mail ou senha incorretos.");
         } else {
             console.log("Erro ao tentar fazer login.");
             alert("Erro ao tentar fazer login.");
